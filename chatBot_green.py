@@ -1,4 +1,4 @@
-from textblob import TextBlob
+import random
 
 pos_replies = [
   "I'm glad to hear you're having a good time!",
