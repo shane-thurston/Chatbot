@@ -29,7 +29,8 @@ while repeat == True:
       print('Im glad to hear it.')
   print(random.choice(pos_replies))
 
-  ans = input('Would you like again').lower()
+  print('Would you like to continue?')
+  ans = input('> ').lower()
   if ans == 'no':
     repeat = False
 
