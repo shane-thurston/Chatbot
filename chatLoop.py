@@ -8,7 +8,6 @@ while repeat == True:
   blob = TextBlob(ans)
 
   print(blob.polarity) #- 1 to 1
-  print(blob.subjectivity) # 0 - 1
 
   # 3. Respond appropriately to positive and negative sentiment
   if blob.polarity < -0.5:
@@ -21,11 +20,6 @@ while repeat == True:
     print('Greater than 0.1 and less than 0.5')
   else:
     print('Greater than or equal 0.5')
-    
-  if blob.subjectivity > 0.3:
-    print('and a bit biased')
-  else:
-    print('and quite objective')
 
   ans = input('Would you like again')
   if ans == 'no':
