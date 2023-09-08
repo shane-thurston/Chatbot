@@ -10,6 +10,7 @@ positive_words = ['good','great','amazing','well']
 
 print("Hi there, my name is Eliza. What's your name?")
 name = input('> ')
+# 1. Personalised greeting
 print(f'Hi there {name}, do you have a nickname?')
 nName = input('> ')
 if nName.lower() == 'no':
@@ -19,19 +20,20 @@ if nName.lower() == 'no':
 else:
   print(f'Nice to meet you {nName}')
 
-repeat = True
-while repeat == True:
+print('Ready?')
+# 2. Looping until the user decides to exit
+line = input('> ')
+while line:
   # 1. Ask an open ended question
   print("How are you feeling right now?")
-  ans = input('> ').lower()
-  for word in positive_words:
-    if word in ans:
-      print('Im glad to hear it.')
-  print(random.choice(pos_replies))
-
-  print('Would you like to continue?')
-  ans = input('> ').lower()
-  if ans == 'no':
-    repeat = False
+  line = input('> ').lower()
+  # 2. Check for user response. Exit if nothing is typed in
+  if line:
+    # 3. Simple response to user input
+    for word in positive_words:
+      if word in line:
+        print('Im glad to hear it.')
+    # 4. Basic social good feature
+    print(random.choice(pos_replies))
 
 print('Thanks for using')
